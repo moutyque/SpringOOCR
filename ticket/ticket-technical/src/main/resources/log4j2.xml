@@ -9,14 +9,6 @@
         <Console name="STDOUT">
             <PatternLayout pattern="%highlight{%-5level} [%t] %c : %m%n"/>
         </Console>
-        <File name="MyFile" fileName="logs/app.log">
-      <PatternLayout>
-        <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
-      </PatternLayout>
-    </File>
-    <Async name="Async">
-      <AppenderRef ref="MyFile"/>
-    </Async>
     </Appenders>
 
     <Loggers>
@@ -25,7 +17,7 @@
         </Logger>
 
         <Root level="debug">
-            <AppenderRef ref="Async"/>
+            <AppenderRef ref="STDOUT"/>
         </Root>
     </Loggers>
 

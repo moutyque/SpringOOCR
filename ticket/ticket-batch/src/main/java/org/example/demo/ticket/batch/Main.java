@@ -4,8 +4,9 @@ package org.example.demo.ticket.batch;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.example.demo.ticket.model.exception.TechnicalException;
-
-
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.example.demo.ticket.business.contract.ManagerFactory;
 /**
  * Classe Principale de lancement des Batches.
  *
@@ -24,6 +25,13 @@ public class Main {
      * @throws TechnicalException sur erreur technique
      */
     public static void main(String[] pArgs) throws TechnicalException {
+     
+    	 ApplicationContext vApplicationContext
+         = new ClassPathXmlApplicationContext("classpath:/org/example/demo/ticket/technical/bootstrapContext.xml");
+
+     // Il est possible de récupérer un bean dans ce contexte :
+     ManagerFactory vManagerFactory
+         = vApplicationContext.getBean("managerFactory", ManagerFactory.class);
         try {
             if (pArgs.length < 1) {
                 throw new TechnicalException("Veuillez préciser le traitement à effectuer !");

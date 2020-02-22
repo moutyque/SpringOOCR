@@ -12,8 +12,17 @@
     </listener>
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:/applicationContext.xml</param-value>
+        <param-value>org.example.demo.ticket.bootstrap.SpringConfiguration</param-value>
     </context-param>
-
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:/org/example/demo/ticket/technical/bootstrapContext.xml</param-value>
+    </context-param>
+    
+        <resource-ref>
+        <res-ref-name>jdbc/DB_TICKET</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
     
 </web-app>
