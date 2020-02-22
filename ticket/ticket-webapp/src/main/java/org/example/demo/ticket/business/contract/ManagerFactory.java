@@ -1,7 +1,7 @@
 package org.example.demo.ticket.business.contract;
 
-import org.example.demo.ticket.business.contact.manager.ProjectManager;
-import org.example.demo.ticket.business.contact.manager.TicketManager;
+import org.example.demo.ticket.business.manager.contract.ProjectManager;
+import org.example.demo.ticket.business.manager.contract.TicketManager;
 
 public interface ManagerFactory {
 

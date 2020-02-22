@@ -3,7 +3,7 @@ package org.example.demo.ticket.business.manager.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.example.demo.ticket.business.contract.manager.ProjectManager;
+import org.example.demo.ticket.business.manager.contract.ProjectManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
 
