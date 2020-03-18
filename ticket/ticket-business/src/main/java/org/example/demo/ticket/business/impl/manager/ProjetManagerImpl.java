@@ -3,9 +3,6 @@ package org.example.demo.ticket.business.impl.manager;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.ManagedBean;
-import javax.inject.Named;
-
 import org.example.demo.ticket.business.contract.manager.ProjectManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;

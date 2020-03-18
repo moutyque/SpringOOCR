@@ -6,21 +6,6 @@ import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
 
 public interface ProjectManager {
-
-	 /**
-     * Renvoie la liste des {@link Projet}
-     *
-     * @return List
-     */
-	List<Projet> getListProjet();
-
-	 /**
-     * Renvoie le projet demandé
-     *
-     * @param pId l'identifiant du projet
-     * @return Le {@link Projet}
-     * @throws NotFoundException Si le projet n'est pas trouvé
-     */
-	Projet getProjet(Integer pId) throws NotFoundException;
-
+	public Projet getProjet(Integer pId) throws NotFoundException;
+	public List<Projet> getListProjet();
 }
