@@ -15,9 +15,16 @@ public class ProjectRM implements RowMapper<Projet>{
 	public Projet mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Projet vProjet = new Projet(rs.getInt("id"));
 			vProjet.setNom(rs.getString("nom"));
-			vProjet.setDateCreation(rs.getDate("dateCreation"));
+			vProjet.setDateCreation(rs.getDate("date_creation"));
 			vProjet.setCloture(rs.getBoolean("cloture"));
-			vProjet.setResponsable(new UtilisateurRM().mapRow(rs, rowNum));
+			
+			
+			Utilisateur user = new Utilisateur();
+			user.setId(rs.getInt("responsable_id"));
+			user.setNom(rs.getString("nom"));
+			user.setPrenom(rs.getString("prenom"));
+
+			vProjet.setResponsable(user);
 								
 		    return vProjet;
 

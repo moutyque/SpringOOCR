@@ -16,7 +16,8 @@
     </context-param>
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:/org/example/demo/ticket/technical/bootstrapContext.xml</param-value>
+<!--         <param-value>classpath:/org/example/demo/ticket/technical/bootstrapContext.xml</param-value> -->
+<param-value>classpath:/org/example/demo/ticket/webapp/webappContext.xml</param-value>
     </context-param>
     
         <resource-ref>

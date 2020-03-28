@@ -4,6 +4,7 @@
        xsi:schemaLocation="
             http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans.xsd">
+                <import resource="classpath:/org/example/demo/ticket/technical/bootstrapContext.xml" />
             
     <!-- Chargement du fichier properties contenant
         la configuration de la datasource vers DB_TICKET  -->
@@ -19,4 +20,7 @@
           destroy-method="close">
         <constructor-arg ref="dataSourceTicketConfiguration"/>
     </bean>
+    
+    
+    
 </beans>
